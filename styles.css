@@ -1,0 +1,78 @@
+/* Model Styles */
+
+body {
+  background: url(img/backgrnd_image.jpg) no-repeat center center/ cover;
+  height: 100vh;
+  position: relative;
+}
+
+#open-btn {
+  position: absolute;
+  top: 70%;
+  left: 7%;
+  width: 350px;
+  height: 110px;
+  font-size: 2rem;
+  background: transparent;
+  color: white;
+  border: solid 2px white;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: bold;
+  box-shadow: 0 0 3px black;
+  transition: 0.5s;
+}
+
+#open-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+#model {
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 100px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  animation-name: animatemodel;
+  animation-duration: 0.4s;
+}
+
+#close-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  color: red;
+}
+
+#model-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Model Animations*/
+
+@keyframes animatemodel {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
